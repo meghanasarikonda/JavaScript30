@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="65" class="key-65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
   <audio data-key="70" src="sounds/openhat.wav"></audio>
@@ -59,7 +59,8 @@
 
 <script>
   window.addEventListener('keydown', function(e) {
-    console.log(e.key, e)
+    const audio = document.querySelector(".key-" + e.keyCode);
+    console.log(audio)
   })
 </script>
 
